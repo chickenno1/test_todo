@@ -1,0 +1,117 @@
+/* Tổng quan */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #02386a, #2a6c98); /* Màu nền Noel */
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Ẩn thanh cuộn */
+  position: relative;
+}
+
+/* Hiệu ứng tuyết */
+#snow-container {
+  position: fixed; /* Phủ toàn màn hình */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000; /* Đặt trên tất cả nội dung */
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1.2rem;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0.8;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10%); /* Bắt đầu từ trên */
+  }
+  100% {
+    transform: translateY(100vh); /* Rơi hết màn hình */
+  }
+}
+
+/* App chính */
+.app {
+  position: relative;
+  z-index: 1; /* Đặt dưới hiệu ứng tuyết */
+  max-width: 800px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.9); /* Làm mờ nền ứng dụng */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: None;
+}
+
+h1 {
+  text-align: center;
+  color: #ff0000;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Bảng Todo */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #388e3c;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #ffe082;
+}
+
+/* Form thêm Task */
+.add-task {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add-task input,
+.add-task button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.add-task button {
+  background-color: #ff1744;
+  color: white;
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  background-color: #d50000;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div id="snow-container"></div>
+    <!-- Hiệu ứng tuyết -->
+    <div class="app">
+      <h1>🎄 Todo App 🎅</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="todo-list">
+          <!-- Todo items will be dynamically added here -->
+        </tbody>
+      </table>
+      <div class="add-task">
+        <input type="text" id="new-task" placeholder="Enter new task" />
+        <input type="date" id="new-due-date" />
+        <button id="add-btn">Add Task</button>
+      </div>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
