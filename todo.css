@@ -1,59 +1,25 @@
-/* Tổng quan */
+/* Toàn bộ trang */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #02386a, #2a6c98); /* Màu nền Noel */
-  font-family: Arial, sans-serif;
-  overflow: hidden; /* Ẩn thanh cuộn */
-  position: relative;
+  background: linear-gradient(120deg, #e3f2fd, #bbdefb);
 }
 
-/* Hiệu ứng tuyết */
-#snow-container {
-  position: fixed; /* Phủ toàn màn hình */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1000; /* Đặt trên tất cả nội dung */
-}
-
-.snowflake {
-  position: absolute;
-  top: -10px;
-  color: white;
-  font-size: 1.2rem;
-  animation-name: fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  opacity: 0.8;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-10%); /* Bắt đầu từ trên */
-  }
-  100% {
-    transform: translateY(100vh); /* Rơi hết màn hình */
-  }
-}
-
-/* App chính */
+/* Khung ứng dụng */
 .app {
-  position: relative;
-  z-index: 1; /* Đặt dưới hiệu ứng tuyết */
   max-width: 800px;
   margin: 50px auto;
-  background: rgba(255, 255, 255, 0.9); /* Làm mờ nền ứng dụng */
+  background: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  position: relative;
   border: None;
 }
 
+/* Tiêu đề */
 h1 {
   text-align: center;
   color: #ff0000;
@@ -62,7 +28,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Bảng Todo */
+/* Bảng hiển thị */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -90,7 +56,7 @@ tr:hover {
   background: #ffe082;
 }
 
-/* Form thêm Task */
+/* Form thêm task */
 .add-task {
   margin-top: 20px;
   display: flex;
